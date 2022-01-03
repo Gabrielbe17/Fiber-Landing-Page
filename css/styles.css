@@ -142,6 +142,9 @@ header .hero__text div {
 header .hero__text h1 ~ p {
   margin: 1.25em 0;
 }
+header .hero__text .rating img:last-of-type {
+  margin-right: 0.55em;
+}
 @media (max-width: 863px) {
   header .hero__text .rating {
     display: none;
@@ -311,11 +314,15 @@ footer {
 footer .footer {
   display: grid;
   align-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
   gap: 1em;
 }
 footer .footer > div {
   padding: 1em 0;
+}
+@media (min-width: 863px) {
+  footer .footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 footer .footer__info {
   width: 90%;

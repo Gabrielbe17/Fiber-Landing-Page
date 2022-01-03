@@ -5,11 +5,14 @@ footer{
     .footer{
         display: grid;
         align-content: center;
-        grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
         gap: 1em;
 
         & > div{
             padding: 1em 0;
+        }
+
+        @media (min-width:$tablet) {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
     // Footer Info
@@ -30,7 +33,6 @@ footer{
             li a{
                 opacity: $opacity;
             }
-
         }
 
         @media (min-width:$tablet) {

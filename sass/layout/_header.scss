@@ -81,6 +81,10 @@ header{
             }
             // Rating
             .rating{
+                img:last-of-type{
+                    margin-right: .55em;
+                }
+
                 @media (max-width: $tablet) {
                     display: none;
                 }
