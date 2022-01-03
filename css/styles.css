@@ -1,0 +1,345 @@
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+section {
+  max-width: 95rem;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li a {
+  text-decoration: none;
+  color: #121212;
+}
+
+.text {
+  opacity: 0.7;
+  line-height: 1.3em;
+}
+
+p {
+  line-height: 1.3em;
+}
+
+.img {
+  width: 100%;
+  max-width: 35em;
+  height: auto;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: clamp(2em, 5vw, 3em);
+}
+
+h2, h3 {
+  font-size: clamp(1.75em, 3vw, 1.9em);
+}
+
+p {
+  font-size: clamp(1.1em, 3vw, 1.125em);
+}
+
+header {
+  background-color: #fbf8f4;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideLeft 1.75s ease;
+}
+header nav h4 {
+  font-size: 1.4rem;
+}
+header nav h4.logo {
+  font-size: clamp(1.25em, 2.2vw, 1.5em);
+}
+header nav h4 ~ * {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.2em;
+}
+header nav .toggle-menu {
+  cursor: pointer;
+}
+@media (max-width: 735px) {
+  header nav .toggle-menu ~ * {
+    display: none;
+  }
+}
+@media (min-width: 736px) {
+  header nav .toggle-menu {
+    display: none;
+  }
+}
+header nav .header__cta {
+  font-weight: 700;
+}
+header nav .header__cta--active a {
+  color: #fff;
+  display: inline-block;
+  padding: 1em;
+  border-radius: 0.4em;
+  background-color: #4d14d2;
+  padding: 1em 1.5em;
+  transition: all 0.35s;
+}
+header nav .header__cta--active a:hover {
+  transform: scale(1.04);
+  opacity: 0.75;
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+header .hero {
+  display: grid;
+  align-items: center;
+  animation: slideRight 1.75s ease;
+}
+@media (max-width: 863px) {
+  header .hero__img {
+    grid-row: 1/2;
+  }
+}
+header .hero__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+header .hero__text > * {
+  width: 100%;
+  margin: 0;
+}
+header .hero__text div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.6em;
+  flex-wrap: wrap;
+}
+header .hero__text h1 ~ p {
+  margin: 1.25em 0;
+}
+@media (max-width: 863px) {
+  header .hero__text .rating {
+    display: none;
+  }
+}
+header .hero__text .hero__cta {
+  font-weight: 600;
+}
+header .hero__text .hero__cta--btn {
+  display: inline-block;
+  padding: 1em;
+  border-radius: 0.4em;
+  background-color: #4d14d2;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+}
+@media screen and (max-width: 863px) {
+  header .hero__text .hero__cta--btn {
+    width: 100%;
+  }
+}
+header .hero__text .hero__cta p {
+  text-align: center;
+  cursor: pointer;
+  color: #4d14d2;
+}
+@media screen and (max-width: 863px) {
+  header .hero__text .hero__cta p {
+    width: 100%;
+  }
+}
+header .hero__text .hero__cta span {
+  position: relative;
+}
+header .hero__text .hero__cta span::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 0.15em;
+  background-color: #4d14d2;
+  width: 100%;
+}
+@media (min-width: 863px) {
+  header .hero__text .hero__cta {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.75em;
+  }
+}
+header .hero__text .hero__features {
+  gap: 1.1em;
+}
+@media (max-width: 863px) {
+  header .hero__text .hero__features {
+    display: block;
+  }
+}
+@media (min-width: 863px) {
+  header .hero {
+    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+  }
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+main .main > * {
+  margin: 3.5em 0;
+}
+main h5 {
+  color: #4d14d2;
+  font-size: clamp(1.1em, 3vw, 1.25em);
+}
+main .main__features {
+  display: grid;
+  gap: 1.25em;
+}
+@media screen and (min-width: 863px) {
+  main .main__features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+main .main__trial {
+  display: grid;
+  background-color: #4d14d2;
+  border-radius: 0.5em;
+  padding: 1.5em 1.5em 0 1.5em;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5em;
+}
+main .main__trial .btn {
+  display: inline-block;
+  padding: 1em;
+  border-radius: 0.4em;
+  background-color: #fff;
+  color: #4d14d2;
+  font-weight: 600;
+}
+@media (max-width: 863px) {
+  main .main__trial .btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 863px) {
+  main .main__trial {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+main .main__testimonials {
+  display: grid;
+  gap: 1.25em;
+  color: #121212;
+}
+main .main__testimonials > div {
+  border: 1px solid rgba(156, 156, 156, 0.356);
+  border-radius: 0.55em;
+  padding: 1em;
+}
+@media screen and (min-width: 863px) {
+  main .main__testimonials {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+main .main__testimonials--profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+}
+main .main__testimonials--profile span {
+  display: block;
+}
+main .main__testimonials .testimonial__btn {
+  font-weight: 600;
+  display: inline-block;
+  border: 1px solid rgba(156, 156, 156, 0.356);
+  border-radius: 0.55em;
+  color: #4d14d2;
+  width: 100%;
+  padding: 1em 0;
+  text-align: center;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+footer {
+  background-color: #fbf8f4;
+}
+footer .footer {
+  display: grid;
+  align-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+  gap: 1em;
+}
+footer .footer > div {
+  padding: 1em 0;
+}
+footer .footer__info {
+  width: 90%;
+}
+footer .footer__links {
+  display: grid;
+  width: 100%;
+}
+footer .footer__links ul {
+  padding-left: 0;
+  display: grid;
+  gap: 0.75em;
+}
+footer .footer__links ul span {
+  font-weight: 600;
+}
+footer .footer__links ul li a {
+  opacity: 0.7;
+}
+@media (min-width: 863px) {
+  footer .footer__links {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25em;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

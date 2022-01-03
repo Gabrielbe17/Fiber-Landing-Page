@@ -1,0 +1,85 @@
+
+@use '../abstracts/index' as *;
+// Main Section
+
+
+main{
+    .main > *{
+        margin: 3.5em 0;
+    }
+    h5{
+        color: $primary;
+        font-size: clamp(1.1em, 3vw, 1.25em);
+    }
+    //Features
+    .main__features{
+        display: grid;
+        gap: 1.25em;
+
+        @include cards;
+    }
+
+    //Trial Section
+    .main__trial{
+        display: grid;
+        background-color: $primary;
+        border-radius: .5em;
+        padding: 1.5em 1.5em 0 1.5em;
+        color: $white;
+
+        @include flex(column, flex-start);
+        gap: 1.5em;
+
+        // Btn
+        .btn{
+            @include btn-white;
+            font-weight: 600;  
+
+            @media (max-width:$tablet){
+                @include flex(row, center);
+            }
+        }
+
+        @media (min-width:$tablet){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    //Testimonial Section
+    .main__testimonials{
+        display: grid;
+        gap: 1.25em;
+        color: $dark;
+
+        // All the cards
+        & > div{
+            border: 1px solid rgba(156, 156, 156, 0.356);
+            border-radius: .55em;
+            padding: 1em;    
+        }
+
+        @include cards;
+
+        //Profile 
+        &--profile{
+            @include flex(row, flex-start);
+            gap: 1em;
+
+
+            span{
+                display: block;
+
+            }
+        }
+
+        // Tetstimonials Cta
+
+        .testimonial__btn{
+            font-weight: 600;
+            @include cta-cards;
+        }        
+    }
+
+
+
+}

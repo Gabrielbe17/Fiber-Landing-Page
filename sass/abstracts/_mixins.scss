@@ -1,0 +1,75 @@
+@use 'variables' as *;
+
+
+// Flex
+@mixin flex ($direction, $justify){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: center;
+}
+// Primary Buttons
+@mixin btn {
+    display: inline-block;
+    padding: 1em;
+    border-radius: .4em;
+    background-color: $primary;
+}
+// Secondary Buttons
+@mixin btn-white {
+    display: inline-block;
+    padding: 1em;
+    border-radius: .4em;
+    background-color: $white;
+    color: $primary;
+}
+// Cards Cta
+@mixin cta-cards {
+    display: inline-block;
+    border: 1px solid rgba(156, 156, 156, 0.356);
+    border-radius: .55em;
+    color: $primary;
+    width: 100%;
+    padding: 1em 0;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+
+// Cards
+
+@mixin cards{
+    @media screen and (min-width:$tablet) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+// Cta Center
+@mixin btn-center{
+    @media screen and (max-width: $tablet) {
+        width: 100%;
+    }
+}
+// Animations
+@mixin slideFromLeft {
+    @keyframes slideLeft {
+        0%{
+            transform: translateX(-100%);
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+}
+
+@mixin slideFromRight {
+    @keyframes slideRight {
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+}

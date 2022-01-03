@@ -1,0 +1,46 @@
+@use '../abstracts/index' as *;
+
+// General Styles
+html{
+    font-size: 16px;
+    overflow-x: hidden;
+}
+body{
+    font-family: 'Noto Sans', sans-serif;
+}
+section{
+    max-width: 95rem;
+    margin: 0 auto;
+    padding: 2em;
+}
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+li a{
+    text-decoration: none; 
+    color: $dark;
+}
+.text{
+    opacity: $opacity;
+    line-height: 1.3em;
+}
+p{
+    line-height: 1.3em;
+}
+.img{
+    width: 100%;
+    max-width: 35em;
+    height: auto;
+    margin: 0 auto;
+}
+h1{
+    font-size: clamp(2em, 5vw, 3em);
+}
+h2, h3{
+
+    font-size: clamp(1.75em, 3vw, 1.9em);
+}
+p{
+    font-size: clamp(1.1em, 3vw, 1.125em);
+}
