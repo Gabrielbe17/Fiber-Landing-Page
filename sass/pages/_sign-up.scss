@@ -1,1 +1,152 @@
-@use '../abstracts/index';
+
+@use '../abstracts/index' as *;
+@use 'general';
+
+.container{
+    @media (min-width:$tablet) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+}
+section.form, section.features{
+    max-width: 45em;
+    margin: 0 auto;
+}
+main, article{
+    @media (min-width:$tablet) {
+        @include flex(column, center);
+    }
+}
+h1{
+    margin: 1.5em 0;
+}
+a{
+    text-decoration: none;
+}
+.logo{
+    color: $dark;
+    font-size: clamp(1.3em, 2vw, 1.55em);
+    &:visited{
+        color: $dark;
+    }
+}
+
+// Main
+main{
+    background-color: $white;
+    height: 100vh;
+}
+
+// Form
+form{
+    label{
+        font-weight: 600;
+        font-size: 1.15rem;
+    }
+    input:not(#check){
+        margin: .5em 0 1.5em 0;
+        display: block;
+        width: 100%;
+        border: 1px solid rgba(156, 156, 156, 0.356);
+        border-radius: .25em;
+        padding: .75em 0 .75em .65em;
+
+        &:focus{
+            outline: 1.5px solid rgba(156, 156, 156, 0.356);
+        }
+    }
+
+    // Pass
+    .pass{
+        position: relative;
+    }
+    .hide-pass{
+        position: absolute;
+        top: .75em;
+        cursor: pointer;
+        right: 0
+
+    }
+
+    // Checkbox
+    .check{
+        @include flex(row, flex-start);
+        p{
+            margin-left: 1em;
+        }
+        span{
+            color: $primary;
+            font-weight: 600;
+            position: relative;
+
+            &::after{
+                content:'';
+                position: absolute;   
+                bottom: -1px;
+                left:0;
+                height: .15em;
+                background-color: $primary;
+                width: 100%;
+            }
+        }
+
+    }
+    // Button
+    button{
+        border: none;
+        color: $white;
+        cursor: pointer;
+        width: 100%;
+        @include btn;
+    }
+    .sign-in{
+        text-align: center;
+        a{
+            color: $primary;
+            &:visited{
+                color: $primary;
+            }
+        }
+    }
+}
+// Article
+article{
+    background: $primary;
+    color: $white;
+    text-align: center;
+    height: 100vh;
+
+    // Box
+    .features{
+        @include flex(column, flex-start);
+        
+        img{
+            width: 100%;
+            max-width: 45em;
+        }
+        p{
+            opacity: $opacity;;
+        }
+        div{
+            width: 8.50em;
+            height: 1.5em;
+            span{
+                background-color: $white;
+                display: inline-block;
+                height: .85em;
+                border-radius: 50%;
+                width: .85em;
+                margin-right: .2em;
+
+                &.active ~ span {
+                    opacity: .5;
+                }
+            }
+        }
+        
+    }
+    @media (max-width:$tablet){
+        display: none;
+    }
+}

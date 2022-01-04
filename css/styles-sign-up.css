@@ -1,3 +1,204 @@
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+}
 
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+section {
+  max-width: 95rem;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li a {
+  text-decoration: none;
+  color: #121212;
+}
+
+.text {
+  opacity: 0.7;
+  line-height: 1.3em;
+}
+
+p {
+  line-height: 1.3em;
+}
+
+.img {
+  width: 100%;
+  max-width: 35em;
+  height: auto;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: clamp(2em, 5vw, 3em);
+}
+
+h2, h3 {
+  font-size: clamp(1.75em, 3vw, 1.9em);
+}
+
+p {
+  font-size: clamp(1.1em, 3vw, 1.125em);
+}
+
+@media (min-width: 863px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}
+
+section.form, section.features {
+  max-width: 45em;
+  margin: 0 auto;
+}
+
+@media (min-width: 863px) {
+  main, article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+h1 {
+  margin: 1.5em 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  color: #121212;
+  font-size: clamp(1.3em, 2vw, 1.55em);
+}
+.logo:visited {
+  color: #121212;
+}
+
+main {
+  background-color: #fff;
+  height: 100vh;
+}
+
+form label {
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+form input:not(#check) {
+  margin: 0.5em 0 1.5em 0;
+  display: block;
+  width: 100%;
+  border: 1px solid rgba(156, 156, 156, 0.356);
+  border-radius: 0.25em;
+  padding: 0.75em 0 0.75em 0.65em;
+}
+form input:not(#check):focus {
+  outline: 1.5px solid rgba(156, 156, 156, 0.356);
+}
+form .pass {
+  position: relative;
+}
+form .hide-pass {
+  position: absolute;
+  top: 0.75em;
+  cursor: pointer;
+  right: 0;
+}
+form .check {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+form .check p {
+  margin-left: 1em;
+}
+form .check span {
+  color: #4d14d2;
+  font-weight: 600;
+  position: relative;
+}
+form .check span::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 0.15em;
+  background-color: #4d14d2;
+  width: 100%;
+}
+form button {
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  display: inline-block;
+  padding: 1em;
+  border-radius: 0.4em;
+  background-color: #4d14d2;
+}
+form .sign-in {
+  text-align: center;
+}
+form .sign-in a {
+  color: #4d14d2;
+}
+form .sign-in a:visited {
+  color: #4d14d2;
+}
+
+article {
+  background: #4d14d2;
+  color: #fff;
+  text-align: center;
+  height: 100vh;
+}
+article .features {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+article .features img {
+  width: 100%;
+  max-width: 45em;
+}
+article .features p {
+  opacity: 0.7;
+}
+article .features div {
+  width: 8.5em;
+  height: 1.5em;
+}
+article .features div span {
+  background-color: #fff;
+  display: inline-block;
+  height: 0.85em;
+  border-radius: 50%;
+  width: 0.85em;
+  margin-right: 0.2em;
+}
+article .features div span.active ~ span {
+  opacity: 0.5;
+}
+@media (max-width: 863px) {
+  article {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=styles-sign-up.css.map */

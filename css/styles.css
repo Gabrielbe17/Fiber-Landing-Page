@@ -75,6 +75,9 @@ header nav h4 ~ * {
   gap: 1.2em;
 }
 header nav .toggle-menu {
+  outline: none;
+  border: none;
+  background-color: transparent;
   cursor: pointer;
 }
 @media (max-width: 735px) {

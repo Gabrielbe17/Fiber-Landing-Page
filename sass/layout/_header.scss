@@ -17,9 +17,13 @@ header{
             gap: 1.2em;
         }
 
-        
+        // Button
+
         // Hamburger Menu
         .toggle-menu{
+            outline: none;
+            border: none;
+            background-color: transparent;
             cursor: pointer;
             & ~ *{
                 @media (max-width:735px) {
@@ -31,6 +35,9 @@ header{
                 display: none;
             }
         }
+        // Responsive Navbar
+        // 
+
         //Header Cta
         .header__cta{
             font-weight: 700;
